@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Dry Fruits</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">Premium Dry Fruits</h1>
+      <div class="hamburger" onclick="toggleMenu()">?</div>
+      <nav id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" onclick="toggleDropdown()">Shop ?</a>
+            <ul class="dropdown-content" id="shopDropdown">
+              <li><a href="#almonds">Almonds</a></li>
+              <li><a href="#cashews">Cashews</a></li>
+              <li><a href="#walnuts">Walnuts</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="javascript:void(0);" onclick="openCart()">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="product-list" id="shop">
+      <div class="product" id="almonds">
+        <img src="images/almonds.jpg" alt="Almonds" />
+        <h3>Premium Almonds (250g)</h3>
+        <p>?350</p>
+        <button onclick="addToCart('Premium Almonds')">Add to Cart</button>
+      </div>
+      <div class="product" id="cashews">
+        <img src="images/cashews.jpg" alt="Cashews" />
+        <h3>Premium Cashews (250g)</h3>
+        <p>?400</p>
+        <button onclick="addToCart('Premium Cashews')">Add to Cart</button>
+      </div>
+      <div class="product" id="walnuts">
+        <img src="images/walnuts.jpg" alt="Walnuts" />
+        <h3>Premium Walnuts (250g)</h3>
+        <p>?450</p>
+        <button onclick="addToCart('Premium Walnuts')">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Premium Dry Fruits. All rights reserved.</p>
+  </footer>
+
+  <!-- ?? Hidden Cart Panel -->
+  <div id="cart-panel" class="hidden">
+    <h2>Your Cart</h2>
+    <ul id="cart-items-list"></ul>
+    <button onclick="closeCart()">Close</button>
+  </div>
+
+  <!-- JavaScript functions -->
+  <script>
+    let cartCount = 0;
+
+    function addToCart(productName) {
+      cartCount++;
+      document.getElementById("cart-count").textContent = cartCount;
+
+      const cartList = document.getElementById("cart-items-list");
+      const li = document.createElement("li");
+      li.textContent = productName;
+      cartList.appendChild(li);
+    }
+
+    function openCart() {
+      document.getElementById("cart-panel").classList.remove("hidden");
+    }
+
+    function closeCart() {
+      document.getElementById("cart-panel").classList.add("hidden");
+    }
+
+    function toggleDropdown() {
+      const dropdown = document.getElementById("shopDropdown");
+      dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

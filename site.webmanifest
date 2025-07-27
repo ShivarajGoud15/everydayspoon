@@ -1,0 +1,21 @@
+{
+  "name": "Prime nuts",
+  "short_name": "organic",
+  "icons": [
+    {
+      "src": "/C:\\Users\\shiva\\OneDrive\\Desktop\\updated website/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/C:\\Users\\shiva\\OneDrive\\Desktop\\updated website/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#9b6e6e",
+  "background_color": "#cc4a4a",
+  "display": "standalone"
+}

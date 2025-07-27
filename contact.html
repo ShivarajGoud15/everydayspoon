@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Premium Dry Fruits</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1 class="logo">Premium Dry Fruits</h1>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav id="navbar">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" onclick="toggleDropdown()">Shop ▼</a>
+            <ul class="dropdown-content" id="shopDropdown">
+              <li><a href="index.html#almonds">Almonds</a></li>
+              <li><a href="index.html#cashews">Cashews</a></li>
+              <li><a href="index.html#walnuts">Walnuts</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section style="max-width: 500px; margin: 40px auto;">
+      <h2>We'd love to hear from you!</h2>
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Message:</label><br>
+        <textarea name="message" rows="5" required></textarea><br><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Premium Dry Fruits. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
